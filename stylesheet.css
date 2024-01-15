@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* NAVBAR */
+#nav {
+    transition: all .3s;
+}
+
+/* HEADER */
+.header {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(images/home.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.btn1.btn-outline-warning {
+    --bs-btn-bg: #ffc107;
+    --bs-btn-color: #000;
+    --bs-btn-hover-color: #ffc107;
+    --bs-btn-hover-bg: transparent;
+}
+
+/* SHOP */
+.kartu {
+    position: relative;
+    transition: .3s;
+}
+
+.kartu img {
+    transition: all .3s;
+}
+
+.kartu:hover img {
+    transform: translateY(-110px);
+}
+
+.kartu .card-text {
+    transition: .3s;
+}
+
+.kartu:hover .card-text {
+    transform: translateY(-80px);
+}
+
+.kartu .card-body .btnShop {
+    position: absolute;
+    left: 50%;
+    bottom: -3.9%;
+    transform: translate(-50%, 0);
+    transition: .3s;
+}
+
+.kartu:hover .card-body .btnShop {
+    transform: translate(-50%, -80px);
+}
+
+.kartu .buy-now {
+    transition: opacity .3s ease-in-out;
+}
+
+/* WHY */
+.why i {
+    position: relative;
+}
+
+.why .bulat {
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background: white;
+    z-index: -1;
+}
+
+.zIn-- {
+    z-index: -2;
+}
+
+/* DESIGN */
+h5 {
+    position: relative;
+}
+
+.design .bulat {
+    position: absolute;
+    top: 25%;
+    right: 10%;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background: white;
+    z-index: -1;
+}
+
+
+
+
+/* HOVER */
