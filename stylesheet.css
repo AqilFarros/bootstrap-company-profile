@@ -82,7 +82,7 @@
 }
 
 .zIn-- {
-    z-index: -2;
+    z-index: 1;
 }
 
 /* DESIGN */
@@ -105,3 +105,23 @@ h5 {
 
 
 /* HOVER */
+.kotakDeskripsi {
+    transition: .3s;
+}
+
+.kotakDeskripsi:hover .bulat {
+    background: #86ffc6;
+}
+
+.kotakDeskripsi.bg-body-tertiary:hover {
+    background-image: var(--bs-gradient)!important;
+    background-color: rgba(var(--bs-success-rgb),var(--bs-bg-opacity))!important;
+}
+
+.kotakDeskripsi:hover .judulKotak {
+    color: white !important;
+}
+
+.kotakDeskripsi:hover .deskripsiKotak {
+    color: white;
+}

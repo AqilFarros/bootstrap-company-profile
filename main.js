@@ -97,4 +97,13 @@ kartuShop.forEach((kartu, index) => {
 })
 
 // // // // // // // // // // // // //
+let kotakDeskripsi = document.querySelectorAll(".kotakDeskripsi")
+
+kotakDeskripsi.forEach((kotak) => {
+    kotak.addEventListener(("mouseover"), () => {
+        
+    })
+})
+
+console.log(kotakDeskripsi);
 console.log("Ppppp");
