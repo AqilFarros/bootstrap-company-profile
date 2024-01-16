@@ -1,7 +1,7 @@
 let logo = document.getElementById("logo")
 
 let navbar = document.getElementById("nav")
-let navLinks = document.querySelectorAll("#navLink")
+let navLinks = document.querySelectorAll(".navbar .nav-link")
 
 if (window.scrollY > 0) {
     logo.src = "images/logoGreen.png";
@@ -97,3 +97,50 @@ kartuShop.forEach((kartu, index) => {
 })
 
 // // // // // // // // // // // // //
+let itemSell = document.querySelectorAll("#itemSell")
+let itemName = document.querySelectorAll(".itemName")
+console.log(itemName);
+
+let pembayaran = document.querySelector(".pembayaran")
+let btnClose = document.getElementById("btnClose")
+let imgBuy = document.querySelector("#imgBuy")
+let titleItem = document.querySelector("#titleItem")
+let deskItem = document.querySelector("#deskItem")
+let dcrItem = document.querySelector("#dcrItem")
+let amountItem = document.querySelector("#amountItem")
+let incItem = document.querySelector("#incItem")
+let allItem = document.querySelector("#allItem")
+
+amountItem.innerHTML = 1
+let currentAmount = parseInt(amountItem.innerHTML)
+
+incItem.addEventListener("click", () => {
+    currentAmount++
+
+    amountItem.innerHTML = currentAmount
+})
+
+dcrItem.addEventListener("click", () => {
+    currentAmount--
+
+    currentAmount = Math.max(currentAmount, 1)
+
+    amountItem.innerHTML = currentAmount
+})
+
+tombolShop.forEach((tombolShop, index) => {
+        tombolShop.addEventListener("click", () => {
+            let itemSellSrc = itemSell[index].src
+            let itemNameText = itemName[index].innerText
+
+            pembayaran.classList.toggle("none")
+            pembayaran.classList.toggle("noneF")
+            titleItem.innerText = itemNameText
+            imgBuy.src = itemSellSrc
+        })
+})
+
+btnClose.addEventListener("click", () => {
+    pembayaran.classList.toggle("none")
+    pembayaran.classList.toggle("noneF")
+})

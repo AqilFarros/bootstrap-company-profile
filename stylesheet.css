@@ -9,6 +9,26 @@
     transition: all .3s;
 }
 
+.nav-item {
+    position: relative;
+}
+
+.navbar .nav-item::before {
+    position: absolute;
+    content: '';
+    background: #198754;
+    height: 2px;
+    width: 0%;
+    bottom: -2%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: all 0.15s ease-in-out;
+}
+
+.nav-item:hover::before {
+    width: 40%;
+}
+
 /* HEADER */
 .header {
     position: relative;
@@ -124,4 +144,50 @@ h5 {
 
 .kotakDeskripsi:hover .deskripsiKotak {
     color: white;
+}
+
+
+
+
+
+
+/* ::before */
+.hJudul {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.hJudul::before {
+    content: '';
+    position: absolute;
+    width: 60%;
+    background: #198754;
+    height: 3px;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.hJudul::after {
+    content: '';
+    position: absolute;
+    width: 30%;
+    background: #198754;
+    height: 6px;
+    bottom: -11.5px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+/* none */
+.none {
+    display: none;
+}
+
+.noneF {
+    background: transparent;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
