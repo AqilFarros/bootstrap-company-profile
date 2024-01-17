@@ -48,7 +48,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto me-5 mb-2 mb-lg-0">
+                <ul class="navbar-nav ms-auto me-5 mb-2 mb-lg-0 text-center">
                     <li class="nav-item mx-4">
                         <a class="nav-link active" aria-current="page" href="#" id="navLink">Home</a>
                     </li>
@@ -77,13 +77,13 @@
                         Elevate your home with our meticulously crafted premium furniture, enhancing both aesthetics and
                         functionality for sophisticated comfort.
                     </p>
-                    <div class="row">
-                        <div class="col-xl-7 col-lg-8 col-md-7 col-sm-8 col-12 me-0">
+                    <div class="row justify-content-center w-100">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 me-0 text-center">
                             <a href="#service" type="button"
-                                class="btn btn-outline-warning rounded-pill py-2 px-4 btn1 mb-4">Shop
+                                class="btn btn-outline-warning rounded-pill py-2 px-4 btn1 mb-4 text-nowrap">Shop
                                 now</a>
                         </div>
-                        <div class="col-xl-5 col-lg-4 col-md-5 col-sm-4 col-12">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 text-center">
                             <a href="#why" type="button"
                                 class="btn btn-outline-warning rounded-pill py-2 px-4">Explore</a>
                         </div>
@@ -163,7 +163,7 @@
                                 <img id="itemSell" src="images/chairNew.png" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <p class="itemName card-text desk text-center">Kursi legend
-                                        <h3 class="card-text harga text-center">$50.00</h3>
+                                        <h3 class="card-text harga text-center">$<span class="nominalHarga">150</span>.00</h3>
                                     </p>
                                     <button type="button" id="tombolBuy" class="btn btn-outline-success bg-white btnShop">
                                         <i class="fa-solid fa-circle-plus"></i><span class="buy-now"></span>
@@ -176,7 +176,7 @@
                                 <img id="itemSell" src="images/glassTableNew.png" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <p class="itemName card-text desk text-center">Meja legend
-                                        <h3 class="card-text harga text-center">$50.00</h3>
+                                        <h3 class="card-text harga text-center">$<span class="nominalHarga">50</span>.00</h3>
                                     </p>
                                     <button type="button" id="tombolBuy" class="btn btn-outline-success bg-white btnShop">
                                         <i class="fa-solid fa-circle-plus"></i><span class="buy-now"></span>
@@ -189,7 +189,7 @@
                                 <img id="itemSell" src="images/lemariLast.png" class="card-img-top" alt="...">
                                 <div class="card-body">
                                     <p class="itemName card-text desk text-center">Lemari kecil legend
-                                        <h3 class="card-text harga text-center">$50.00</h3>
+                                        <h3 class="card-text harga text-center">$<span class="nominalHarga">250</span>.00</h3>
                                     </p>
                                     <button type="button" id="tombolBuy" class="btn btn-outline-success bg-white btnShop">
                                         <i class="fa-solid fa-circle-plus"></i><span class="buy-now"></span>
@@ -371,8 +371,8 @@
     </div>
 
     <div class="container-fluid pembayaran fixed-top none">
-        <div class="container bg-body-tertiary">
-            <button type="button" class="btn-close tombol-tutup" aria-label="Close" id="btnClose"></button>
+        <div class="container konten bg-body-tertiary">
+            <button type="button" class="btn-close tombol-tutup m-5" aria-label="Close" id="btnClose"></button>
             <div class="row">
                 <div class="col-md-6 col-12">
                     <img src="images/glassTableNew.png" alt="" class="img-fluid" id="imgBuy">
@@ -383,24 +383,34 @@
                     <p id="deskItem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis accusantium ad quis deleniti
                         soluta ipsum at animi distinctio earum veritatis!</p>
 
-                    <div class="row align-items-center">
+                    <div class="row align-items-center text-center my-5">
                         <div class="col-4"><button class="btn btn-success" id="dcrItem">-</button></div>
                         <div class="col-4" id="amountItem"></div>
                         <div class="col-4"><button class="btn btn-success" id="incItem">+</button></div>
                     </div>
 
                     <div class="row justify-content-start" id="allItem">
-                        <div class="col-12">Item = <span>1</span></div>
+                        <div class="col-6" id="nameAmount"></div>
+                        <span class="col-2" id="allAmount"></span>
+                        <div class="col-4" id="priceAmont">$<span id="itemPrice"></span></div>
                     </div>
 
-                    <div class="btn btn-outline-success">Buy now</div>
+                    <div class="row border-top">
+                        <div class="col-12 text-center my-2 fs-3 fw-bold" id="allPrice">$<span id="priceChange"></span></div>
+                    </div>
+
+                    <div class="btn btn-outline-success mt-2 mb-3 buyBtn disabled">Buy now</div>
+                </div>
+                <div class="col-12 text-center mt-3 mb-5 d-flex justify-content-center">
+                    <div class="btn btn-success thank-you w-75 py-4 none">Thank you for buying!</div>
                 </div>
             </div>
         </div>
     </div>
 
     <script src="js/bootstrap.bundle.js"></script>
-    <script src="main.js"></script>
+    <script src="design.js"></script>
+    <script src="payment.js"></script>
 </body>
 
 </html>

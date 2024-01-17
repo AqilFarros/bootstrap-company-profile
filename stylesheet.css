@@ -185,9 +185,13 @@ h5 {
 }
 
 .noneF {
-    background: transparent;
+    background: rgba(0, 0, 0, .7);
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.block {
+    display: block;
 }
