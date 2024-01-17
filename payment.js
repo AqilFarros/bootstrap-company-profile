@@ -122,6 +122,7 @@ pembayaran.addEventListener("click", (event) => {
         y < konten.offsetTop || y > konten.offsetTop + konten.offsetHeight) {
         // Bagian yang tidak terisi oleh konten mendapatkan event
         i = 0;
+        buyBtn.classList.add("disabled")
         pembayaran.classList.remove("noneF");
         pembayaran.classList.add("none")
         currentAmount = 0;
@@ -135,6 +136,7 @@ btnClose.addEventListener("click", () => {
 
     pembayaran.classList.add("none")
     pembayaran.classList.remove("noneF")
+    buyBtn.classList.add("disabled")
 
     currentAmount = 0
     amountItem.innerHTML = 0
@@ -144,18 +146,29 @@ btnClose.addEventListener("click", () => {
 buyBtn.addEventListener("click", () => {
     thankYou.classList.toggle("none")
     thankYou.classList.toggle("block")
+    buyBtn.classList.add("none")
+    buyBtn.classList.remove("block")
+    buyBtn.classList.add("disabled")
+    incItem.classList.add("disabled")
+    dcrItem.classList.add("disabled")
 
     let time = setTimeout(() => {
         thankYou.classList.toggle("none")
         thankYou.classList.toggle("block")
+
+        buyBtn.classList.remove("none")
+        buyBtn.classList.add("block")
 
         i = 0
 
         pembayaran.classList.toggle("none")
         pembayaran.classList.toggle("noneF")
 
+        incItem.classList.remove("disabled")
+        dcrItem.classList.remove("disabled")
+
         currentAmount = 0
         amountItem.innerHTML = 0
         allAmount.innerText = 0
-    }, 2000)
+    }, 1500)
 })
